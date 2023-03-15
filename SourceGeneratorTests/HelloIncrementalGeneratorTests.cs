@@ -61,7 +61,7 @@ public class HelloIncrementalGeneratorTests
             generators: new ISourceGenerator[] { sourceGenerator },
             driverOptions: new GeneratorDriverOptions(default, trackIncrementalGeneratorSteps: true));
 
-        driver.RunGenerators(compilation);
+        driver = driver.RunGenerators(compilation);
 
         return driver.GetRunResult();
     }
