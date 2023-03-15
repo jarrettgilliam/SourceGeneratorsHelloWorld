@@ -4,7 +4,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using SourceGenerator;
 
-public class UnitTest1
+public class HelloIncrementalGeneratorTests
 {
     [Fact]
     public void Generator_AddsPartialMethod()
