@@ -7,7 +7,7 @@ using SourceGenerator;
 public class HelloIncrementalGeneratorTests
 {
     [Fact]
-    public void Generator_AddsPartialMethod()
+    public void Generator_AddsHelloFromMethod()
     {
         string userCode = """
             namespace ConsoleApp;
