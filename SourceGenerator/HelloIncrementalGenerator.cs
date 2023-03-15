@@ -12,6 +12,8 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 [Generator(LanguageNames.CSharp)]
 public sealed class HelloIncrementalGenerator : IIncrementalGenerator
 {
+    private static readonly string GeneratedCodeAttribute = $@"[global::System.CodeDom.Compiler.GeneratedCodeAttribute(""{typeof(HelloIncrementalGenerator).Assembly.GetName().Name}"", ""{typeof(HelloIncrementalGenerator).Assembly.GetName().Version}"")]";
+
     public void Initialize(IncrementalGeneratorInitializationContext context)
     {
         IncrementalValuesProvider<MainMethodInfo> provider = context.SyntaxProvider
@@ -59,6 +61,7 @@ public sealed class HelloIncrementalGenerator : IIncrementalGenerator
 
             public static partial class {{mainMethod.ClassName}}
             {
+                {{GeneratedCodeAttribute}}
                 static void HelloFrom(string name) =>
                     global::System.Console.WriteLine($"Generator says: Hi from '{name}'");
             }

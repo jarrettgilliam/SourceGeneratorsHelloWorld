@@ -29,6 +29,7 @@ public class HelloIncrementalGeneratorTests
 
             public static partial class Program
             {
+                [global::System.CodeDom.Compiler.GeneratedCodeAttribute("SourceGenerator", "1.0.0.0")]
                 static void HelloFrom(string name) =>
                     global::System.Console.WriteLine($"Generator says: Hi from '{name}'");
             }
